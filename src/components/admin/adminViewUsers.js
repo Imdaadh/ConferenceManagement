@@ -22,7 +22,7 @@ class AdminViewUsers extends PureComponent {
         } )
     }
     deleteUser(id){
-        axios.delete('https://afprojectconference.herokuapp.com/user/deleteUser/${id}').then(res => alert(res.data.msg))
+        axios.delete(`https://afprojectconference.herokuapp.com/user/deleteUser/${id}`).then(res => alert(res.data.msg))
     }
     editUser(id){
         this.props.history.push('/updateUser/${id}');
