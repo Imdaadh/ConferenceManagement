@@ -34,7 +34,7 @@ class Login extends PureComponent {
                     email:this.state.email,
                     password:this.state.password
                 }
-                axios.post('${API_URL}/user/login',users).then(res=>{
+                axios.post('https://afprojectconference.herokuapp.com/conference/getConference/user/login',users).then(res=>{
                         if (res.data.success){
                                 alert(res.data.role)
                                 this.props.history.push('/')
