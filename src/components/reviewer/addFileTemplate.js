@@ -71,6 +71,7 @@ const AddFileTemplate = (props) => {
         setErrorMsg('Please enter all the field values.');
       }
     } catch (error) {
+      alert(error)
       error.response && setErrorMsg(error.response.data);
     }
   };
