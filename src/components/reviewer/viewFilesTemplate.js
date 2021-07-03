@@ -26,7 +26,7 @@ const ViewTemplate= () => {
 
   const downloadFile = async (id, path, mimetype) => {
     try {
-      const result = await axios.get('https://afprojectconference.herokuapp.com/downloadTemplate/${id}', {
+      const result = await axios.get(`https://afprojectconference.herokuapp.com/downloadTemplate/`+id, {
         responseType: 'blob'
       });
       const split = path.split('/');
@@ -42,7 +42,7 @@ const ViewTemplate= () => {
 
 
   const DeleteTemplate= (id) =>{
-    axios.delete('https://afprojectconference.herokuapp.com/deleteTemplate/${id}').then(res => alert(res.data.msg))
+    axios.delete(`https://afprojectconference.herokuapp.com/deleteTemplate/`+id).then(res => alert(res.data.msg))
   }
 
   return (
