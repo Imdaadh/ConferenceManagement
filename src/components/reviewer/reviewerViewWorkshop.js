@@ -20,14 +20,14 @@ class ReviewerViewWorkshop extends PureComponent {
             status: "approved",
             email:email
         }
-        axios.put('https://afprojectconference.herokuapp.com/workshop/editWorkshop/${id}',workshop).then(res => alert(res.data.msg))
+        axios.put(`https://afprojectconference.herokuapp.com/workshop/editWorkshop/`+id,workshop).then(res => alert(res.data.msg))
     }
     RejectConference= (id,email) =>{
         const workshop = {
             status: "reject",
             email:email
         }
-        axios.put('https://afprojectconference.herokuapp.com/workshop/editWorkshop/${id}',workshop).then(res => alert(res.data.msg))
+        axios.put(`https://afprojectconference.herokuapp.com/workshop/editWorkshop/`+id,workshop).then(res => alert(res.data.msg))
     }
 
     render() {
