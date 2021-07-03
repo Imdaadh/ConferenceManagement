@@ -44,7 +44,7 @@ console.log("email is bbbbb :"+this.state.email)
                 contactDetail:this.state.email
                 }
                 console.log(workshops);
-                axios.post(`${API_URL}/workshop/addWorkshop`,workshops).then(res => alert(res.data.msg))
+                axios.post('${API_URL}/workshop/addWorkshop',workshops).then(res => alert(res.data.msg))
                   this.props.history.push('/userViewWorkshop')
         } catch (error) {
             alert(error.response.data.msg)

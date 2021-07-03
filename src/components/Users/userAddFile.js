@@ -88,7 +88,7 @@ const UserAddFile = (props) => {
 
 
           setErrorMsg('');
-          await axios.post(`${API_URL}/upload`, formData, {
+          await axios.post('${API_URL}/upload', formData, {
             headers: {
               'Content-Type': 'multipart/form-data'
             }

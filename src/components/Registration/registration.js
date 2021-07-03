@@ -30,7 +30,7 @@ class Registration extends PureComponent {
                 email:this.state.email,
                 password:this.state.password
             }
-        axios.post(`${API_URL}/user/register`,users).then(res => {
+        axios.post('${API_URL}/user/register',users).then(res => {
         alert(res.data.msg)
         if (res.data.success) {
             users.role === 'workshop presenter' ? this.props.history.push(`/addWorkshop/${users.email}`)

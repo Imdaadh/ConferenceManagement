@@ -21,7 +21,7 @@ class UpdateConference extends PureComponent {
     }
     componentDidMount = () =>{
         const id =this.props.match.params._id;
-        axios.get(`${API_URL}/conference/conference/${id}`).then(res =>{
+        axios.get('${API_URL}/conference/conference/${id}').then(res =>{
             this.setState({
                 name:res.data.name,
                 time:res.data.time,
@@ -40,7 +40,7 @@ class UpdateConference extends PureComponent {
                 venue:this.state.venue,
                 status:'pending'
             }
-            axios.put(`${API_URL}/conference/editConference/${this.props.match.params._id}`,users).then(res => alert(res.data.msg))
+            axios.put('${API_URL}/conference/editConference/${this.props.match.params._id}',users).then(res => alert(res.data.msg))
             this.props.history.push('/editorViewConference')
         } catch (error) {
             alert(error.response.data.msg)

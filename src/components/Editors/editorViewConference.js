@@ -11,15 +11,15 @@ class EditorViewConference extends PureComponent {
         }
     }
     componentDidMount(){
-         axios.get(`${API_URL}/conference/getConference`).then(response =>{
+         axios.get('${API_URL}/conference/getConference').then(response =>{
             this.setState({conferences:response.data})
         } )
     }
     deleteConference(id){
-        axios.delete(`${API_URL}/conference/deleteConference/${id}`).then(res => alert(res.data.msg))
+        axios.delete('${API_URL}/conference/deleteConference/${id}').then(res => alert(res.data.msg))
     }
     editConference(id){
-        this.props.history.push(`/updateConference/${id}`);
+        this.props.history.push('/updateConference/${id}');
     }
     render() {
         return (

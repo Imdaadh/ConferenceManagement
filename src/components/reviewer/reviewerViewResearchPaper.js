@@ -11,7 +11,7 @@ const ReviewerViewRP= () => {
         const getFilesList = async () => {
             try {
                 console.log("ggggg")
-                const { data } = await axios.get(`${API_URL}/getAllFiles`);
+                const { data } = await axios.get('${API_URL}/getAllFiles');
                 console.log(data)
                 setErrorMsg('');
                 setFilesList(data);
@@ -24,7 +24,7 @@ const ReviewerViewRP= () => {
 
     const downloadFile = async (id, path, mimetype) => {
         try {
-            const result = await axios.get(`${API_URL}/download/${id}`, {
+            const result = await axios.get('${API_URL}/download/${id}', {
                 responseType: 'blob'
             });
             const split = path.split('/');
@@ -42,7 +42,7 @@ const ReviewerViewRP= () => {
             status: "reject",
             email:email
         }
-        axios.put(`${API_URL}/editStatus/${id}`,researchPaper).then(res => alert(res.data.msg))
+        axios.put('${API_URL}/editStatus/${id}',researchPaper).then(res => alert(res.data.msg))
     }
 
     const ApproveRP= (id,email) =>{
@@ -50,7 +50,7 @@ const ReviewerViewRP= () => {
             status: "approved",
             email:email
         }
-        axios.put(`${API_URL}/editStatus/${id}`,researchPaper).then(res => alert(res.data.msg))
+        axios.put('${API_URL}/editStatus/${id}',researchPaper).then(res => alert(res.data.msg))
     }
     return (
         <div  >

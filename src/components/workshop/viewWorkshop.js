@@ -14,12 +14,12 @@ class ViewWorkshop extends React.Component{
         }
     }
     componentDidMount(){
-        axios.get(`${API_URL}/workshop/getWorkshop`).then(response =>{
+        axios.get('${API_URL}/workshop/getWorkshop').then(response =>{
             this.setState({workshops:response.data})
 
 
         } )
-        axios.get(`${API_URL}/conference/getConference`).then(response1 =>{
+        axios.get('${API_URL}/conference/getConference').then(response1 =>{
             this.setState({conferences:response1.data})
         } )
 

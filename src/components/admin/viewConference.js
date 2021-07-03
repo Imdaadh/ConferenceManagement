@@ -11,7 +11,7 @@ class ViewConference extends PureComponent {
         }
     }
     componentDidMount(){
-         axios.get(`${API_URL}/conference/getConference`).then(response =>{
+         axios.get('${API_URL}/conference/getConference').then(response =>{
             this.setState({conferences:response.data})
         } )
     }
@@ -19,13 +19,13 @@ class ViewConference extends PureComponent {
         const conference = {
             status: "approved"
         }
-        axios.put(`${API_URL}/conference/editStatus/${id}`,conference).then(res => alert(res.data.msg))
+        axios.put('${API_URL}/conference/editStatus/${id}',conference).then(res => alert(res.data.msg))
     }
    RejectConference(id){
         const conference = {
             status: "reject"
         }
-        axios.put(`${API_URL}/conference/editStatus/${id}`,conference).then(res => alert(res.data.msg))
+        axios.put('${API_URL}/conference/editStatus/${id}',conference).then(res => alert(res.data.msg))
     }
     editUser(id){
         this.props.history.push(`/updateUser/${id}`);

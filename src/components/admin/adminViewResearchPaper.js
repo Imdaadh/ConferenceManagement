@@ -12,7 +12,7 @@ const AdminViewRP= () => {
         const getFilesList = async () => {
             try {
                 console.log("ggggg")
-                const { data } = await axios.get(`${API_URL}/getAllFiles`);
+                const { data } = await axios.get('${API_URL}/getAllFiles');
                 console.log(data)
 
 
@@ -27,7 +27,7 @@ const AdminViewRP= () => {
     }, []);
     const downloadFile = async (id, path, mimetype) => {
         try {
-            const result = await axios.get(`http://localhost:5000/download/${id}`, {
+            const result = await axios.get('http://localhost:5000/download/${id}', {
                 responseType: 'blob'
             });
             const split = path.split('/');

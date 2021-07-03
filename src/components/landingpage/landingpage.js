@@ -15,7 +15,7 @@ class Landingpage extends React.Component{
         }
     }
     componentDidMount(){
-        axios.get(`${API_URL}/conference/getConference`).then(response =>{
+        axios.get('${API_URL}/conference/getConference').then(response =>{
             this.setState({conferences:response.data})
 
 
