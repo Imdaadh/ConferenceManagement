@@ -88,7 +88,7 @@ const UserAddFile = (props) => {
 
 
           setErrorMsg('');
-          await axios.post('https://afprojectconference.herokuapp.com/upload', formData, {
+          await axios.post(`https://conference-app-af.herokuapp.com/upload`, formData, {
             headers: {
               'Content-Type': 'multipart/form-data'
             }
