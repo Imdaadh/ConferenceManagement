@@ -19,7 +19,7 @@ class EditorViewConference extends PureComponent {
         axios.delete(`https://afprojectconference.herokuapp.com/conference/deleteConference/${id}`).then(res => alert(res.data.msg))
     }
     editConference(id){
-        this.props.history.push("/updateConference/${id}");
+        this.props.history.push("/updateConference"+id);
     }
     render() {
         return (
