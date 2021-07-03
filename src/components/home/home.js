@@ -13,14 +13,14 @@ class Home extends PureComponent {
 
 
     componentDidMount(){
-        axios.get('http://localhost:5000/conference/getConference').then(response =>{
+        axios.get('https://afprojectconference.herokuapp.com/conference/getConference').then(response =>{
             this.setState({conferences:response.data})
         } )
 
     }
 
     deleteUser(id){
-        axios.delete(`http://localhost:5000/admin/users/${id}`).then(res => alert(res.data.msg))
+        axios.delete(`https://afprojectconference.herokuapp.com/admin/users/${id}`).then(res => alert(res.data.msg))
     }
 
 

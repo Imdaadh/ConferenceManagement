@@ -13,14 +13,14 @@ class AvailableWorkshop extends PureComponent {
 
 
     componentDidMount(){
-        axios.get('http://localhost:5000/workshop/getWorkshop').then(response =>{
+        axios.get('https://afprojectconference.herokuapp.com/workshop/getWorkshop').then(response =>{
             this.setState({workshops:response.data})
         } )
 
     }
 
     deleteUser(id){
-        axios.delete(`http://localhost:5000/admin/users/${id}`).then(res => alert(res.data.msg))
+        axios.delete(`https://afprojectconference.herokuapp.com/admin/users/${id}`).then(res => alert(res.data.msg))
     }
 
 

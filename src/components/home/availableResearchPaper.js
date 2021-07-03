@@ -15,7 +15,7 @@ class AvailableResearchPaper extends PureComponent {
 
 
     componentDidMount(){
-        axios.get('http://localhost:5000/researchPaper/getResearchPaper').then(response =>{
+        axios.get('https://afprojectconference.herokuapp.com/researchPaper/getResearchPaper').then(response =>{
             this.setState({researchPapers:response.data})
         } )
 
