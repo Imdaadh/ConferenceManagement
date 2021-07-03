@@ -40,7 +40,7 @@ class UpdateConference extends PureComponent {
                 venue:this.state.venue,
                 status:'pending'
             }
-            axios.put('https://afprojectconference.herokuapp.com/conference/editConference/${this.props.match.params._id}',users).then(res => alert(res.data.msg))
+            axios.put('https://afprojectconference.herokuapp.com/conference/editConference/{this.props.match.params._id}',users).then(res => alert(res.data.msg))
             this.props.history.push('/editorViewConference')
         } catch (error) {
             alert(error.response.data.msg)
