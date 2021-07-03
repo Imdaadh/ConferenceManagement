@@ -13,7 +13,7 @@ class UserViewWorkshop extends PureComponent {
         }
     }
     deleteWorkshop(id){
-        axios.delete('https://afprojectconference.herokuapp.com/workshop/deleteWorkshop/${id}').then(res => alert(res.data.msg))
+        axios.delete(`https://afprojectconference.herokuapp.com/workshop/deleteWorkshop/`+id).then(res => alert(res.data.msg))
     }
 
     componentDidMount(){
