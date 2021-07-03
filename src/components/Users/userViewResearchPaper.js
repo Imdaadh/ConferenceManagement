@@ -44,7 +44,7 @@ const UserViewRP= () => {
     };
 
     const  deleteRP= (id)=>{
-        axios.delete('https://afprojectconference.herokuapp.com/deleteFile/${id}').then(res => alert(res.data.msg))
+        axios.delete(`https://afprojectconference.herokuapp.com/deleteFile/`+id).then(res => alert(res.data.msg))
     }
 
 
