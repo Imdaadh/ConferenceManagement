@@ -19,7 +19,7 @@ class ViewConference extends PureComponent {
         const conference = {
             status: "approved"
         }
-        axios.put('https://afprojectconference.herokuapp.com/conference/editStatus/${id}',conference).then(res => alert(res.data.msg))
+        axios.put('https://conference-app-af.herokuapp.com/conference/editStatus/${id}',conference).then(res => alert(res.data.msg))
     }
    RejectConference(id){
         const conference = {
