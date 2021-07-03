@@ -27,7 +27,7 @@ const AdminViewRP= () => {
     }, []);
     const downloadFile = async (id, path, mimetype) => {
         try {
-            const result = await axios.get('http://localhost:5000/download/${id}', {
+            const result = await axios.get(`https://conference-app-af.herokuapp.com/download/`+id, {
                 responseType: 'blob'
             });
             const split = path.split('/');
