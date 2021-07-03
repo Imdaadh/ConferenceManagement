@@ -25,7 +25,7 @@ const HomeFileTemplates = () => {
   }, []);
   const downloadFile = async (id, path, mimetype) => {
     try {
-      const result = await axios.get('https://afprojectconference.herokuapp.com/downloadTemplate/${id}', {
+      const result = await axios.get(`https://conference-app-af.herokuapp.com/downloadTemplate/`+id, {
         responseType: 'blob'
       });
       const split = path.split('/');

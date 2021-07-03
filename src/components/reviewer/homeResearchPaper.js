@@ -27,7 +27,7 @@ const HomeResearchPaper= () => {
 
   const downloadFile = async (id, path, mimetype) => {
     try {
-      const result = await axios.get('https://afprojectconference.herokuapp.com/download/${id}', {
+      const result = await axios.get(`https://conference-app-af.herokuapp.com/download/`+id, {
         responseType: 'blob'
       });
       const split = path.split('/');
