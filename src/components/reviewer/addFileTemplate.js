@@ -45,6 +45,8 @@ const AddFileTemplate = (props) => {
 
   const handleOnSubmit = async (event) => {
     event.preventDefault();
+    console.log("iii");
+
 
     try {
       const { title, description } = state;
@@ -55,7 +57,7 @@ const AddFileTemplate = (props) => {
           formData.append('title', title);
           formData.append('description', description);
           setErrorMsg('');
-          console.log("formData"+formData);
+          console.log("formData"+description);
           await axios.post('https://afprojectconference.herokuapp.com/uploadTemplate', formData, {
             headers: {
               'Content-Type': 'multipart/form-data'
