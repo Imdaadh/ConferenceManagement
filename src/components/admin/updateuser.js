@@ -20,7 +20,7 @@ class UpdateRegistration extends PureComponent {
     }
     componentDidMount = () =>{
         const id =this.props.match.params._id;
-        axios.get(`https://afprojectconference.herokuapp.com/admin/users/${id}`).then(res =>{
+        axios.get(`https://afprojectconference.herokuapp.com/admin/users/`+id).then(res =>{
         this.setState({
             name:res.data.name,
             email:res.data.email,
