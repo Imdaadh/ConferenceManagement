@@ -58,11 +58,11 @@ const AddFileTemplate = (props) => {
           formData.append('description', description);
           setErrorMsg('');
           console.log("formData"+description);
-          await axios.post('${API_URL}/uploadTemplate', formData, {
+          await axios.post('https://afprojectconference.herokuapp.com/uploadTemplate', formData, alert("print"),{
             headers: {
               'Content-Type': 'multipart/form-data'
             }
-          }).then(res => alert(res.data.msg))
+          }).then(res => alert("res.data.msg"))
           props.history.push('/reviewerViewTemplate');
         } else {
           setErrorMsg('Please select a file to add.');
