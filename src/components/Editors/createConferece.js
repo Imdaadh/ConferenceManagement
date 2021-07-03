@@ -28,7 +28,7 @@ class AddConference extends PureComponent {
                     date:this.state.date,
                     venue:this.state.venue
         }
-        axios.post('${API_URL}/conference/addConference',conference).then(res => alert(res.data.msg))
+        axios.post('https://afprojectconference.herokuapp.com/conference/addConference',conference).then(res => alert(res.data.msg))
         this.props.history.push('/editorViewConference')
         } catch (error) {
             alert(error.response.data.msg)

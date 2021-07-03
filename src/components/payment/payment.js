@@ -30,7 +30,7 @@ class Payment extends PureComponent {
                 cardExpire:this.state.cardExpire,
                 contactDetails:email
             }
-            axios.post('${API_URL}/payment/addPayment',users).then(res => alert(res.data.msg) )
+            axios.post('https://afprojectconference.herokuapp.com/payment/addPayment',users).then(res => alert(res.data.msg) )
             this.props.history.push('/')
         } catch (error) {
             alert(error.response.data.msg)

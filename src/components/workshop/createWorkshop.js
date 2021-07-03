@@ -34,7 +34,7 @@ class CreateWorkshop extends PureComponent {
                 contactDetail:email
                 }
                 console.log(workshops);
-                axios.post('${API_URL}/workshop/addWorkshop',workshops).then(res => alert(res.data.msg))
+                axios.post('https://afprojectconference.herokuapp.com/workshop/addWorkshop',workshops).then(res => alert(res.data.msg))
                   this.props.history.push('/')
         } catch (error) {
             alert(error.response.data.msg)

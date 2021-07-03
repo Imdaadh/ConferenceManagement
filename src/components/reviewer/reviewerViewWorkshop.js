@@ -11,7 +11,7 @@ class ReviewerViewWorkshop extends PureComponent {
         }
     }
     componentDidMount(){
-         axios.get('${API_URL}/workshop/getWorkshop').then(response =>{
+         axios.get('https://afprojectconference.herokuapp.com/workshop/getWorkshop').then(response =>{
             this.setState({workshops:response.data})
         } )
     }
@@ -20,14 +20,14 @@ class ReviewerViewWorkshop extends PureComponent {
             status: "approved",
             email:email
         }
-        axios.put('${API_URL}/workshop/editWorkshop/${id}',workshop).then(res => alert(res.data.msg))
+        axios.put('https://afprojectconference.herokuapp.com/workshop/editWorkshop/${id}',workshop).then(res => alert(res.data.msg))
     }
     RejectConference= (id,email) =>{
         const workshop = {
             status: "reject",
             email:email
         }
-        axios.put('${API_URL}/workshop/editWorkshop/${id}',workshop).then(res => alert(res.data.msg))
+        axios.put('https://afprojectconference.herokuapp.com/workshop/editWorkshop/${id}',workshop).then(res => alert(res.data.msg))
     }
 
     render() {

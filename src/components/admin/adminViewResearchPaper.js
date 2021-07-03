@@ -12,7 +12,7 @@ const AdminViewRP= () => {
         const getFilesList = async () => {
             try {
                 console.log("ggggg")
-                const { data } = await axios.get('${API_URL}/getAllFiles');
+                const { data } = await axios.get('https://afprojectconference.herokuapp.com/getAllFiles');
                 console.log(data)
 
 

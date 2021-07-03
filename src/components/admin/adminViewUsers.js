@@ -12,7 +12,7 @@ class AdminViewUsers extends PureComponent {
         }
     }
     componentDidMount(){
-        axios.get('${API_URL}/admin/users',{
+        axios.get('https://afprojectconference.herokuapp.com/admin/users',{
                 headers:{
                     Authorization:sessionStorage.getItem("token")
                 }
@@ -22,7 +22,7 @@ class AdminViewUsers extends PureComponent {
         } )
     }
     deleteUser(id){
-        axios.delete('${API_URL}/user/deleteUser/${id}').then(res => alert(res.data.msg))
+        axios.delete('https://afprojectconference.herokuapp.com/user/deleteUser/${id}').then(res => alert(res.data.msg))
     }
     editUser(id){
         this.props.history.push('/updateUser/${id}');

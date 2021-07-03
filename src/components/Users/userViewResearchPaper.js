@@ -13,7 +13,7 @@ const UserViewRP= () => {
         const getFilesList = async () => {
             try {
 
-                const { data } = await axios.get('${API_URL}/getAllFiles');
+                const { data } = await axios.get('https://afprojectconference.herokuapp.com/getAllFiles');
                 if(sessionStorage.token){
                    setEmail(decode(sessionStorage.token).email)
                 }
@@ -29,7 +29,7 @@ const UserViewRP= () => {
 
     const downloadFile = async (id, path, mimetype) => {
         try {
-            const result = await axios.get('${API_URL}/download/${id}', {
+            const result = await axios.get('https://afprojectconference.herokuapp.com/download/${id}', {
                 responseType: 'blob'
             });
             const split = path.split('/');
@@ -44,7 +44,7 @@ const UserViewRP= () => {
     };
 
     const  deleteRP= (id)=>{
-        axios.delete('${API_URL}/deleteFile/${id}').then(res => alert(res.data.msg))
+        axios.delete('https://afprojectconference.herokuapp.com/deleteFile/${id}').then(res => alert(res.data.msg))
     }
 
 

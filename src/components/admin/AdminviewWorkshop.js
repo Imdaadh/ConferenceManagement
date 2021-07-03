@@ -10,7 +10,7 @@ class AdminViewWorkshop extends PureComponent {
         }
     }
     componentDidMount(){
-        axios.get('${API_URL}/workshop/getWorkshop').then(response =>{
+        axios.get('https://afprojectconference.herokuapp.com/workshop/getWorkshop').then(response =>{
             this.setState({workshops:response.data})
         } )
     }

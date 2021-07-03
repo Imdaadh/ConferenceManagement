@@ -30,7 +30,7 @@ class Registration extends PureComponent {
                 email:this.state.email,
                 password:this.state.password
             }
-        axios.post('https://afprojectconference.herokuapp.com/conference/getConference/user/register',users).then(res => {
+        axios.post('https://afprojectconference.herokuapp.com/user/register',users).then(res => {
         alert(res.data.msg)
         if (res.data.success) {
             users.role === 'workshop presenter' ? this.props.history.push(`/addWorkshop/${users.email}`)

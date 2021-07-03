@@ -20,7 +20,7 @@ class UpdateRegistration extends PureComponent {
     }
     componentDidMount = () =>{
         const id =this.props.match.params._id;
-        axios.get('${API_URL}/admin/users/${id}').then(res =>{
+        axios.get('https://afprojectconference.herokuapp.com/admin/users/${id}').then(res =>{
         this.setState({
             name:res.data.name,
             email:res.data.email,
@@ -35,7 +35,7 @@ class UpdateRegistration extends PureComponent {
                     role:this.state.role
                 }
                 console.log( this.props.match.params.id);
-                axios.put('${API_URL}/user/editUser/${this.props.match.params._id}',users).then(res => alert(res.data.msg))
+                axios.put('https://afprojectconference.herokuapp.com/user/editUser/${this.props.match.params._id}',users).then(res => alert(res.data.msg))
                 this.props.history.push('/admin-view')
         } catch (error) {
             alert(error.response.data.msg)
