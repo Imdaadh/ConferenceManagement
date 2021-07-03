@@ -11,7 +11,7 @@ class EditorViewConference extends PureComponent {
         }
     }
     componentDidMount(){
-         axios.get('https://afprojectconference.herokuapp.com/conference/getConference').then(response =>{
+         axios.get(`https://afprojectconference.herokuapp.com/conference/getConference`).then(response =>{
             this.setState({conferences:response.data})
         } )
     }
@@ -19,7 +19,7 @@ class EditorViewConference extends PureComponent {
         axios.delete(`https://afprojectconference.herokuapp.com/conference/deleteConference/${id}`).then(res => alert(res.data.msg))
     }
     editConference(id){
-        this.props.history.push(`/updateConference/${id}`);
+        this.props.history.push("/updateConference/${id}");
     }
     render() {
         return (
