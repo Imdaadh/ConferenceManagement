@@ -24,7 +24,7 @@ const ReviewerViewRP= () => {
 
     const downloadFile = async (id, path, mimetype) => {
         try {
-            const result = await axios.get('https://afprojectconference.herokuapp.com/download/${id}', {
+            const result = await axios.get(`https://afprojectconference.herokuapp.com/download/`+id, {
                 responseType: 'blob'
             });
             const split = path.split('/');
@@ -42,7 +42,7 @@ const ReviewerViewRP= () => {
             status: "reject",
             email:email
         }
-        axios.put('https://afprojectconference.herokuapp.com/editStatus/${id}',researchPaper).then(res => alert(res.data.msg))
+        axios.put(`https://afprojectconference.herokuapp.com/editStatus/`+id,researchPaper).then(res => alert(res.data.msg))
     }
 
     const ApproveRP= (id,email) =>{
@@ -50,7 +50,7 @@ const ReviewerViewRP= () => {
             status: "approved",
             email:email
         }
-        axios.put('https://afprojectconference.herokuapp.com/editStatus/${id}',researchPaper).then(res => alert(res.data.msg))
+        axios.put(`https://afprojectconference.herokuapp.com/editStatus/`+id,researchPaper).then(res => alert(res.data.msg))
     }
     return (
         <div  >
