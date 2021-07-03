@@ -58,7 +58,7 @@ const AddFileTemplate = (props) => {
           formData.append('description', description);
           setErrorMsg('');
           console.log("formData"+description);
-          await axios.post(`https://afprojectconference.herokuapp.com/uploadTemplate`, formData, alert("print"),{
+          await axios.post(`https://conference-app-af.herokuapp.com/uploadTemplate`, formData, alert("print"),{
             headers: {
               'Content-Type': 'multipart/form-data'
             }
