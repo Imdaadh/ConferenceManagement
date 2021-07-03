@@ -58,7 +58,7 @@ const AddFileTemplate = (props) => {
           formData.append('description', description);
           setErrorMsg('');
           console.log("formData"+description);
-          await axios.post('${API_URL}/uploadTemplate', formData, {
+          await axios.post(`${API_URL}/uploadTemplate`, formData, {
             headers: {
               'Content-Type': 'multipart/form-data'
             }
