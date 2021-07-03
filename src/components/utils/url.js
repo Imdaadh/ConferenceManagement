@@ -1,3 +1,3 @@
-export const API_URL = 'https://afprojectconference.herokuapp.com/';
+export const API_URL = 'https://afprojectconference.herokuapp.com';
 
 
