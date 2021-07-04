@@ -29,7 +29,7 @@ class Payment extends PureComponent {
                 cvv:this.state.cvv,
                 cardExpire:this.state.cardExpire,
                 contactDetails:email,
-                user:'attendee'
+                user:'researcher'
             }
             axios.post('https://afprojectconference.herokuapp.com/payment/addPayment',users).then(res => alert(res.data.msg) )
             this.props.history.push('/')
@@ -43,7 +43,7 @@ class Payment extends PureComponent {
                 <Header/>
                 <div className="login-page"    style={{  height: 700,marginTop:100}}>
                     <h1>Payment Form</h1>
-                    <h5>Conference Amount is 2000/=</h5>
+                    <h5>Research Paper Amount is 2000/=</h5>
                     <form  onSubmit={this.onSubmit}>
                         <input   type='text'   placeholder="Name on card" name="cardName" value={this.state.cardName} onChange={this.onChange} />
                         <input type='number'  placeholder="Card Number"  name="cardNumber"  value={this.state.cardNumber}  onChange={this.onChange}/>

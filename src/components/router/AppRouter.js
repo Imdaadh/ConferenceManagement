@@ -2,7 +2,7 @@
 import {BrowserRouter as Router ,Route, Switch} from "react-router-dom";
 import Registration from '../Registration/registration';
 import UpdateRegistration from '../admin/updateuser';
-
+import Payment1 from '../payment/researchpaperpayment';
 import Payment from '../payment/payment';
 import AboutUs from '../aboutUs/aboutUs';
 import Login from '../Registration/login';
@@ -97,6 +97,7 @@ class AppRouter extends React.Component{
 
                                    <Route path="/payment/:email" component={Payment}></Route>
                                 <Route path="/payment" component={Payment}></Route>
+                                <Route path="/payment1" component={Payment1}></Route>
 
                                     {/*admin route*/}
                                      <Route path="/adminUI" component={ AdminUI }></Route>
