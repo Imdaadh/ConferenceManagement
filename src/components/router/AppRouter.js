@@ -49,7 +49,7 @@ import AddFileTemplate from '../reviewer/addFileTemplate';
 
 //landing page
 import Landingpage from "../landingpage/landingpage";
-import ViewWorkshop1 from "../workshop/viewWorkshop";
+import ViewWorkshop1 from "../workshop/homeviewWorkshop";
 import React from "react";
 import decode from "jwt-decode";
 
