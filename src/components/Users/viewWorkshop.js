@@ -44,7 +44,7 @@ const UserViewWorkshop= () => {
     };
 
     const  deleteRP= (id)=>{
-        axios.delete(`https://conference-app-af.herokuapp.com/workshop/deleteFile/`+id).then(res => alert(res.data.msg))
+        axios.delete(`https://conference-app-af.herokuapp.com/workshop/deleteWorkshop/`+id).then(res => alert(res.data.msg))
     }
 
 
