@@ -41,19 +41,19 @@ class Login extends PureComponent {
                         }else{
                             sessionStorage.setItem("token",res.data.accessToken)
                             if (res.data.role==='editor') {
-                                alert("welcome"+res.data.role)
+                                alert("welcome :"+res.data.role)
                                 this.props.history.push('/editorViewConference')
                             }else if(res.data.role==='reviewer'){
-                                alert("welcome"+res.data.role)
+                                alert("welcome :"+res.data.role)
                                 this.props.history.push('/ReviewerViewWorkshop')
                             }else  if(res.data.role==='admin') {
-                                alert("welcome"+res.data.role)
+                                alert("welcome :"+res.data.role)
                                 this.props.history.push('/adminViewConference')
                             }else  if(res.data.role==='researcher') {
-                                alert("welcome"+res.data.role)
+                                alert("welcome :"+res.data.role)
                                 this.props.history.push('/userViewRP')
                             }else  if(res.data.role==='workshop presenter') {
-                                alert("welcome"+res.data.role)
+                                alert("welcome :"+res.data.role)
                                 this.props.history.push('/userViewWorkshop')
                             }
                         }
