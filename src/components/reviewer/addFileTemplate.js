@@ -58,11 +58,11 @@ const AddFileTemplate = (props) => {
           formData.append('description', description);
           setErrorMsg('');
           console.log("formData"+description);
-          await axios.post(`https://conference-app-af.herokuapp.com/uploadTemplate`, formData, alert("print"),{
+          await axios.post(`https://conference-app-af.herokuapp.com/uploadTemplate`, formData,{
             headers: {
               'Content-Type': 'multipart/form-data'
             }
-          }).then(res => alert("res.data.msg"))
+          }).then(res => alert(res.data.msg))
           props.history.push('/reviewerViewTemplate');
         } else {
           setErrorMsg('Please select a file to add.');
@@ -138,11 +138,11 @@ const AddFileTemplate = (props) => {
             )
           ) : (
             <div className="preview-message">
-              <p>Image preview will be shown here after selection</p>
+              <p style={{backgroundColor:'lightgray',width:500,height:100}}>Image preview will be shown here after selection</p>
             </div>
           )}
         </div>
-        <Button variant="primary" type="submit" style={{width:300}}>
+        <Button variant="primary" type="submit" style={{width:300,marginRight:1000}}>
           Submit
         </Button>
       </Form>

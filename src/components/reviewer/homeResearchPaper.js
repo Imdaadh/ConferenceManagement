@@ -4,6 +4,7 @@ import axios from 'axios';
 import Myheader from "../header/myheader";
 import {Card} from "react-bootstrap";
 import {API_URL} from "../utils/url";
+import Footer from "../footer/footer";
 
 const HomeResearchPaper= () => {
   const [filesList, setFilesList] = useState([]);
@@ -83,6 +84,7 @@ const HomeResearchPaper= () => {
             }
           </div>
         </div>
+        <Footer/>
       </div>
   );
 };

@@ -4,6 +4,7 @@ import axios from 'axios';
 import Myheader from "../header/myheader";
 import {Card} from "react-bootstrap";
 import {API_URL} from "../utils/url";
+import Footer from "../footer/footer";
 
 const HomeFileTemplates = () => {
   const [filesList, setFilesList] = useState([]);
@@ -50,10 +51,11 @@ const HomeFileTemplates = () => {
                   fl =>
                        <Card border="danger" bg={"danger"} text={'light'}   style={{ width: '70rem', height: '20rem' , color:'white'}} className="mb-2" >
                             <br></br>
-                            <Card.Title>  <b>{fl.description}</b></Card.Title>
+                            <Card.Title>  <b>{fl.title}</b></Card.Title>
                             <hr style={{ borderTopColor:"white" }} ></hr>
                             <Card.Body style={{color:'white',opacity: 8}}>
                               <Card.Text>
+                                  <p>{fl.description}</p>
                                 <button  style={{ marginLeft:900 }}>  <a
                                     href="#/"
                                     onClick={() =>
@@ -69,6 +71,7 @@ const HomeFileTemplates = () => {
             }
           </div>
         </div>
+          <Footer/>
       </div>
  );
 };

@@ -59,7 +59,7 @@ class Registration extends PureComponent {
             </div>
                      <div className="form-group">
                      <select    name="role" value={this.state.role} onChange={this.onChange}>
-                         <option value="attendee" >select the user role</option>
+                         <option value="select the user role" >select the user role</option>
                          <option value="attendee" >attendee</option>
                         <option value="researcher">researcher</option>
                         <option value="workshop presenter">workshop presenter</option>

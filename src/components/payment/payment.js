@@ -42,6 +42,7 @@ class Payment extends PureComponent {
                 <Header/>
                 <div className="login-page"    style={{  height: 600,marginTop:100}}>
                     <h1>Payment Form</h1>
+                    <h5>Conference Amount is 2000/=</h5>
                     <form  onSubmit={this.onSubmit}>
                         <input   type='text'   placeholder="Name on card" name="cardName" value={this.state.cardName} onChange={this.onChange} />
                         <input type='number'  placeholder="Card Number"  name="cardNumber"  value={this.state.cardNumber}  onChange={this.onChange}/>

@@ -14,7 +14,7 @@ class MyFooter extends React.Component{
                                 </div>
                                 
                                 <p style={{marginLeft:"500px"}}><div className="col-lg-3 col-md-6 footer-contact">
-            <h4>Contact Us</h4></div>No.20<br/>Kandy Road, Malabe<br/>Sri Lanka<br></br>
+                                    </div>No.20<br/>Kandy Road, Malabe<br/>Sri Lanka<br></br>
                                     <strong>Phone:</strong> +11-456-455-566<br></br>
                                     <strong>Email:</strong> info@sliit.lk<br></br>
                                 </p>

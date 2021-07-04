@@ -136,7 +136,7 @@ const AddFile = (props) => {
             {({ getRootProps, getInputProps }) => (
               <div {...getRootProps({ className: 'drop-zone' })} ref={dropRef}>
                 <input {...getInputProps()} />
-                <p>Drag and drop a file OR click here to select a file</p>
+                <p style={{backgroundColor:'lightgray',width:500,height:100}}>Drag and drop a file OR click here to select a file</p>
                 {file && (
                   <div>
                     <strong>Selected file:</strong> {file.name}
@@ -161,7 +161,7 @@ const AddFile = (props) => {
             </div>
           )}
         </div>
-        <Button variant="primary" type="submit" style={{width:300}}>
+        <Button variant="primary" type="submit" style={{width:300,marginRight:1000}}>
           Submit
         </Button>
       </Form>
