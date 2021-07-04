@@ -4,7 +4,6 @@ import axios from 'axios';
 import Myheader from "../header/myheader";
 import {Card} from "react-bootstrap";
 import {API_URL} from "../utils/url";
-import Footer from "../footer/footer";
 
 const HomeviewWorkshop= () => {
     const [filesList, setFilesList] = useState([]);
@@ -66,9 +65,8 @@ const HomeviewWorkshop= () => {
                                             <hr style={{borderTopColor: "white"}}></hr>
                                             <Card.Body style={{color: 'white', opacity: 8}}>
                                                 <Card.Text>
-                                                    <p> {fl.description}</p>
-                                                    <p>{fl.description}</p>
-                                                    <p>{fl.status}</p>
+                                                    <p> {fl.topic}</p>
+                                                    <p>{fl.university}</p>
                                                     <button style={{marginLeft: 900}}><a
                                                         href="#/"
                                                         onClick={() =>

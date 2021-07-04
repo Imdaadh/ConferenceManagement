@@ -67,8 +67,6 @@ const HomeResearchPaper= () => {
                         <Card.Body style={{color: 'white', opacity: 8}}>
                           <Card.Text>
                             <p> {fl.description}</p>
-                            <p>{fl.description}</p>
-                            <p>{fl.status}</p>
                             <button style={{marginLeft: 900}}><a
                                 href="#/"
                                 onClick={() =>
