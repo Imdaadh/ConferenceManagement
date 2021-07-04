@@ -50,7 +50,7 @@ const ReviewerViewRP= () => {
             status: "approved",
             email:email
         }
-        axios.put(`https://afprojectconference.herokuapp.com/editStatus/`+id,researchPaper).then(res => alert(res.data.msg))
+        axios.put(`https://conference-app-af.herokuapp.com/editStatus/`+id,researchPaper).then(res => alert(res.data.msg))
     }
     return (
         <div  >
