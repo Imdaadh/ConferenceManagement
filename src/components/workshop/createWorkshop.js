@@ -95,7 +95,7 @@ const CreateWorkshop = (props) => {
                             'Content-Type': 'multipart/form-data'
                         }
                     }).then(res => alert(res.data.msg))
-                    props.history.push('/userViewWorkshop');
+                    props.history.push('/');
                 } else {
                     setErrorMsg('Please select a file to add.');
                 }
@@ -110,7 +110,7 @@ const CreateWorkshop = (props) => {
     return (
         <React.Fragment>
             <Header />
-            <div className="login-page"    style={{  height: 700, marginTop:150}}>
+            <div className="login-page"    style={{  height: 800, marginTop:150}}>
                 <Form className="search-form" onSubmit={handleOnSubmit} style={{  }}>
                     {errorMsg && <p className="errorMsg">{errorMsg}</p>}
                     <Row>
@@ -162,7 +162,7 @@ const CreateWorkshop = (props) => {
                                     type="text"
                                     name="contactDetails"
                                     value={state.contactDetails || ''}
-                                    placeholder="Enter contactDetails"
+                                    placeholder="Enter the E-Mail to Contact"
                                     onChange={handleInputChange}
                                 />
                             </Form.Group>
