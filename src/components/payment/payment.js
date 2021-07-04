@@ -40,7 +40,7 @@ class Payment extends PureComponent {
         return (
             <div>
                 <Header/>
-                <div className="login-page"    style={{  height: 600,marginTop:100}}>
+                <div className="login-page"    style={{  height: 700,marginTop:100}}>
                     <h1>Payment Form</h1>
                     <h5>Conference Amount is 2000/=</h5>
                     <form  onSubmit={this.onSubmit}>
